@@ -30,7 +30,7 @@ const ApplicationDetails = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .post(`/api/applications/details/`, { appln_id: params.id }, config)
+      .post(`https://seedsnitch-backend.onrender.com/api/applications/details/`, { appln_id: params.id }, config)
       .then((res) => {
         setAppln(res.data);
       })
@@ -44,7 +44,7 @@ const ApplicationDetails = () => {
 
   const acceptHandler = () => {
     axios.post(
-      `/api/applications/accept/${params.id}`,
+      `https://seedsnitch-backend.onrender.com/api/applications/accept/${params.id}`,
       { email: userInfo.email, reason: reason },
       config
     );
@@ -56,7 +56,7 @@ const ApplicationDetails = () => {
       alert("Reason can't be empty");
     } else {
       axios.post(
-        `/api/applications/reject/${params.id}`,
+        `https://seedsnitch-backend.onrender.com/api/applications/reject/${params.id}`,
         { email: userInfo.email, reason: reason },
         config
       );

@@ -26,7 +26,7 @@ const PostCreate = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post(`/api/posts/create`, { title, description }, config);
+    axios.post(`https://seedsnitch-backend.onrender.com/api/posts/create`, { title, description }, config);
     navigate(redirect);
   };
 

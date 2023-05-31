@@ -7,7 +7,7 @@ export const listApplications = (keyword = '',pageNumber = '') => async(dispatch
         
         
         dispatch({type: GET_APPLICATIONS_REQUEST})
-        const {data}= await axios.get(`/api/applications?keyword=${keyword}&pageNumber=${pageNumber}`)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/applications?keyword=${keyword}&pageNumber=${pageNumber}`)
     
         
         dispatch({
@@ -47,7 +47,7 @@ export const createApplication = (name,email,startup_name,linkedin_profile,colle
 
 
         dispatch({type: CREATE_APPLICATION_REQUEST})
-        const {data}= await axios.post(`/api/applications/create`,{name,email,startup_name,linkedin_profile,college_name,contact_number,start_up_stage,start_up_description,start_up_problem,start_up_differentiator},config)
+        const {data}= await axios.post(`https://seedsnitch-backend.onrender.com/api/applications/create`,{name,email,startup_name,linkedin_profile,college_name,contact_number,start_up_stage,start_up_description,start_up_problem,start_up_differentiator},config)
         
 
         
@@ -87,7 +87,7 @@ export const listUserApplications = (pageNumber = '') => async(dispatch,getState
         }
         
         dispatch({type: GET_APPLICATION_CREATOR_REQUEST})
-        const {data}= await axios.get(`/api/applications/creator/${userInfo._id}?pageNumber=${pageNumber}`,config)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/applications/creator/${userInfo._id}?pageNumber=${pageNumber}`,config)
    
         dispatch({
             type: GET_APPLICATION_CREATOR_SUCCESS,
@@ -122,7 +122,7 @@ export const listIncubatorApplications = () => async(dispatch,getState) => {
         }
 
         dispatch({type: GET_APPLICATION_INCUBATOR_REQUEST})
-        const {data}= await axios.get(`/api/applications/incubator/`,config)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/applications/incubator/`,config)
    
         dispatch({
             type: GET_APPLICATION_INCUBATOR_SUCCESS,

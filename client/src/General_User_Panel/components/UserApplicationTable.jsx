@@ -68,7 +68,7 @@ const UserApplicationTable = () => {
     setLoading(true);
     axios
       .get(
-        `/api/applications/creator/${userInfo._id}?pageNumber=${pageNumber}`,
+        `https://seedsnitch-backend.onrender.com/api/applications/creator/${userInfo._id}?pageNumber=${pageNumber}`,
         config
       )
       .then((res) => {

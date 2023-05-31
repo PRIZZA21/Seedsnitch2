@@ -21,7 +21,7 @@ const Ambassador = () => {
       })
       .catch((error) => console.error("Error!", error.message));
 
-    axios.post(`/api/ambassador/amb-mail`, { fname, email });
+    axios.post(`https://seedsnitch-backend.onrender.com/api/ambassador/amb-mail`, { fname, email });
   };
 
   if (isSubmitted) {

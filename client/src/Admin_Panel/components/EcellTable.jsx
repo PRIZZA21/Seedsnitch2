@@ -55,7 +55,7 @@ const IncubatorTable = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/api/ecells?pageNumber=${pageNumber}`).then((res) => {
+    axios.get(`https://seedsnitch-backend.onrender.com/api/ecells?pageNumber=${pageNumber}`).then((res) => {
       setEcellsList(res.data.all_ecells);
       setPage(res.data.page);
       setPages(res.data.pages);

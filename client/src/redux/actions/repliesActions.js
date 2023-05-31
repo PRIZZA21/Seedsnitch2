@@ -6,7 +6,7 @@ export const listReplies = (id) => async(dispatch) => {
     try {
         
         dispatch({type: GET_REPLIES_REQUEST})
-        const {data}= await axios.get(`http://localhost:4000/api/replies/${id}`)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/replies/${id}`)
 
         
         dispatch({
@@ -39,7 +39,7 @@ export const createReply = (id,comment) => async(dispatch,getState) => {
         
 
         dispatch({type: CREATE_REPLY_REQUEST})
-        const {data}= await axios.post(`http://localhost:4000/api/replies/create/${id}`,{comment},config)
+        const {data}= await axios.post(`https://seedsnitch-backend.onrender.com/api/replies/create/${id}`,{comment},config)
         
         dispatch({
             type: CREATE_REPLY_SUCCESS,
@@ -74,7 +74,7 @@ export const upvoteReply = (reply_id) => async(dispatch,getState) => {
         }
         
         dispatch({type: REPLY_UPVOTE_REQUEST})
-        const {data}= await axios.put(`http://localhost:4000/api/replies/like/${reply_id}`,{},config)
+        const {data}= await axios.put(`https://seedsnitch-backend.onrender.com/api/replies/like/${reply_id}`,{},config)
         
 
         dispatch({

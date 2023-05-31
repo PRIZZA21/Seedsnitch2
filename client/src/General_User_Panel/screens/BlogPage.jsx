@@ -36,7 +36,7 @@ const BlogPage = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/api/blogs?pageNumber=${pageNumber}`).then((res) => {
+    axios.get(`https://seedsnitch-backend.onrender.com/api/blogs?pageNumber=${pageNumber}`).then((res) => {
       setBlogList(res.data.all_blogs);
       setPage(res.data.page);
       setPages(res.data.pages);

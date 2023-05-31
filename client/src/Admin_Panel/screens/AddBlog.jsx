@@ -31,7 +31,7 @@ const AddBlog = () => {
             }
           }
   
-          var { data } = await axios.post('/api/uploads', formData, config)
+          var { data } = await axios.post('https://seedsnitch-backend.onrender.com/api/uploads', formData, config)
           
           data = (data.substr(8))
           data = '/' +data;
@@ -57,7 +57,7 @@ const AddBlog = () => {
 
     const submitHandler = async (e) => {
         e.preventDefault();
-        axios.post('/api/blogs/create',{title,image,content},config)
+        axios.post('https://seedsnitch-backend.onrender.com/api/blogs/create',{title,image,content},config)
         navigate(redirect);
     }
   

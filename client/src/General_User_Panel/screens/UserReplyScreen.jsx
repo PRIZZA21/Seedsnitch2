@@ -17,13 +17,13 @@ const UserReplyScreen = () => {
       () => { 
         setLoading(true)
 
-        axios.get(`/api/posts/post/${postid}`).then(res=>{
+        axios.get(`https://seedsnitch-backend.onrender.com/api/posts/post/${postid}`).then(res=>{
           setPost(res.data)
         })
         .catch(err=>{
         })
 
-        axios.get(`/api/replies/${postid}`).then(res=>{
+        axios.get(`https://seedsnitch-backend.onrender.com/api/replies/${postid}`).then(res=>{
           setReplies(res.data)
         })
         .catch(err=>{

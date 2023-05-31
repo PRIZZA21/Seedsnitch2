@@ -16,7 +16,7 @@ const AddIncubator = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    axios.post("/api/incubators/create", { name, email });
+    axios.post("https://seedsnitch-backend.onrender.com/api/incubators/create", { name, email });
     navigate(redirect);
   };
 

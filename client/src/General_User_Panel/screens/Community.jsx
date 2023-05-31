@@ -9,7 +9,7 @@ const Community = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get("/api/ecells/all").then((res) => setEcellsList(res.data));
+    axios.get("https://seedsnitch-backend.onrender.com/api/ecells/all").then((res) => setEcellsList(res.data));
     setLoading(false);
   }, []);
 

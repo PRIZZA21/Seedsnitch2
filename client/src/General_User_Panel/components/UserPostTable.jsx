@@ -48,7 +48,7 @@ const UserPostTable = () => {
     setLoading(true);
     axios
       .get(
-        `/api/posts/creator/${userInfo._id}?pageNumber=${pageNumber}`,
+        `https://seedsnitch-backend.onrender.com/api/posts/creator/${userInfo._id}?pageNumber=${pageNumber}`,
         config
       )
       .then((res) => {

@@ -28,7 +28,7 @@ const AddEcell = () => {
             }
           }
   
-          var { data } = await axios.post('/api/uploads', formData, config)
+          var { data } = await axios.post('https://seedsnitch-backend.onrender.com/api/uploads', formData, config)
           
           data = (data.substr(8))
           data = '/' +data;
@@ -50,7 +50,7 @@ const AddEcell = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.post('/api/ecells/create', ({name,college,email,image}))
+        axios.post('https://seedsnitch-backend.onrender.com/api/ecells/create', ({name,college,email,image}))
         navigate(redirect)
     }
 

@@ -55,7 +55,7 @@ const ProfileScreen = () => {
       setError(null);
       setMessage(null);
       axios
-        .put(`/api/users/profile`, { name, email, password, image }, config)
+        .put(`https://seedsnitch-backend.onrender.com/api/users/profile`, { name, email, password, image }, config)
         .then((res) => {
           setMessage(res.data.message);
         })
@@ -85,7 +85,7 @@ const ProfileScreen = () => {
           "Content-Type": "multipart/form-data",
         },
       };
-      var { data } = await axios.post("/api/uploads", formData, config);
+      var { data } = await axios.post("https://seedsnitch-backend.onrender.com/api/uploads", formData, config);
       data = data.substr(8);
       data = "/" + data;
       setImage(data);

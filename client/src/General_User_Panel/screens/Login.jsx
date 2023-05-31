@@ -7,7 +7,7 @@ import Input from "../components/Input";
 
 const Login = () => {
   const googleAuth = () => {
-    window.open("/api/users/auth/google/callback", "_self");
+    window.open("https://seedsnitch-backend.onrender.com/api/users/auth/google/callback", "_self");
   };
 
   let navigate = useNavigate();

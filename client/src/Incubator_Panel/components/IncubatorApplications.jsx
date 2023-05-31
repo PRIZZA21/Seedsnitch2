@@ -66,7 +66,7 @@ const IncubatorApplications = () => {
 
     useEffect(() => {
         setLoading(true)
-        axios.get(`/api/applications/incubator?pageNumber=${pageNumber}`,config)
+        axios.get(`https://seedsnitch-backend.onrender.com/api/applications/incubator?pageNumber=${pageNumber}`,config)
         .then(res=> {
             setApplications(res.data.applications)
             setPage(res.data.page)

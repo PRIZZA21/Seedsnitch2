@@ -47,7 +47,7 @@ const TechSupport = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/api/posts?pageNumber=${pageNumber}`).then((res) => {
+    axios.get(`https://seedsnitch-backend.onrender.com/api/posts?pageNumber=${pageNumber}`).then((res) => {
       setPostsList(res.data.all_posts);
       setPage(res.data.page);
       setPages(res.data.pages);
@@ -67,7 +67,7 @@ const TechSupport = () => {
 
   const reply_handler = (id) => {
     axios
-      .post(`/api/replies/create/${id}`, { comment: reply }, config)
+      .post(`https://seedsnitch-backend.onrender.com/api/replies/create/${id}`, { comment: reply }, config)
       .then((res) => {
         setReply("");
         setSelectedPostId(null);
