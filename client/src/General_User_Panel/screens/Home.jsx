@@ -11,13 +11,13 @@ const Home = () => {
 
   const getUser = () => {
     if (!userInfo)
-      fetch("/api/users/glogin/success", {
+      fetch("https://seedsnitch-backend.onrender.com/api/users/glogin/success", {
         method: "GET",
         credentials: "include",
         headers: {
           Accept: "application/json",
           "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": true,
+          //"Access-Control-Allow-Credentials": true,
         },
       })
         .then((response) => {

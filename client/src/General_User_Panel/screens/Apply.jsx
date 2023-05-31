@@ -53,7 +53,7 @@ const Apply = () => {
           "Content-Type": "multipart/form-data",
         },
       };
-      var { data } = await axios.post("/api/uploadpdf", formData, config);
+      var { data } = await axios.post("https://seedsnitch-backend.onrender.com/api/uploadpdf", formData, config);
       setPdf(data);
       setUploading(false);
     } catch (error) {
@@ -80,7 +80,7 @@ const Apply = () => {
       .catch((error) => console.error("Error!", error.message));
     axios
       .post(
-        `/api/applications/create`,
+        `https://seedsnitch-backend.onrender.com/api/applications/create`,
         {
           name,
           email,

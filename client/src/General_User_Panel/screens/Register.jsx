@@ -6,7 +6,7 @@ import Infobar from "../../Common_Components/Infobar";
 
 const Register = () => {
   const googleAuth = () => {
-    window.open("/api/users/auth/google/callback", "_self");
+    window.open("https://seedsnitch-backend.onrender.com/api/users/auth/google/callback", "_self");
   };
 
   let navigate = useNavigate();

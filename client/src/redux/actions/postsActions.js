@@ -7,7 +7,7 @@ export const listPosts = () => async(dispatch) => {
         
         
         dispatch({type: GET_POSTS_REQUEST})
-        const {data}= await axios.get(`/api/posts/`)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/posts/`)
      
         
         dispatch({
@@ -42,7 +42,7 @@ export const createPost = (title,description) => async(dispatch,getState) => {
         
 
         dispatch({type: CREATE_POST_REQUEST})
-        const {data}= await axios.post(`/api/posts/create`,{title,description},config)
+        const {data}= await axios.post(`https://seedsnitch-backend.onrender.com/api/posts/create`,{title,description},config)
 
 
         dispatch({
@@ -79,7 +79,7 @@ export const upvotePost = (post_id) => async(dispatch,getState) => {
     
 
         dispatch({type: POST_UPVOTE_REQUEST})
-        const {data}= await axios.put(`/api/posts/like/${post_id}`,{},config)
+        const {data}= await axios.put(`https://seedsnitch-backend.onrender.com/api/posts/like/${post_id}`,{},config)
         
 
         dispatch({
@@ -104,7 +104,7 @@ export const getPostById = (id) => async(dispatch) => {
     try {
         
         dispatch({type: GET_POST_BY_ID_REQUEST})
-        const {data}= await axios.get(`/api/posts/${id}`)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/posts/${id}`)
      
         
         dispatch({

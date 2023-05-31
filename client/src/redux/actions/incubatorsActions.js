@@ -7,7 +7,7 @@ export const listIncubators = (pageNumber = '') => async(dispatch) => {
         
         
         dispatch({type: GET_INCUBATORS_REQUEST})
-        const {data}= await axios.get(`http://localhost:4000/api/incubators?pageNumber=${pageNumber}`)
+        const {data}= await axios.get(`https://seedsnitch-backend.onrender.com/api/incubators?pageNumber=${pageNumber}`)
    
         dispatch({
             type: GET_INCUBATORS_SUCCESS,
@@ -31,7 +31,7 @@ export const createIncubator = (name,email) => async(dispatch,getState) => {
     try {
 
         dispatch({type: CREATE_INCUBATOR_REQUEST})
-        const {data}= await axios.post(`http://localhost:4000/api/incubators/create`,{name,email})
+        const {data}= await axios.post(`https://seedsnitch-backend.onrender.com/api/incubators/create`,{name,email})
         
   
         dispatch({

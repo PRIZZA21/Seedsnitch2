@@ -29,7 +29,7 @@ const UpdateEcell = () => {
             }
           }
   
-          var { data } = await axios.post('/api/uploads', formData, config)
+          var { data } = await axios.post('https://seedsnitch-backend.onrender.com/api/uploads', formData, config)
           
           data = (data.substr(8))
           data = '/' +data;
@@ -51,12 +51,12 @@ const UpdateEcell = () => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.put(`/api/ecells/details/${id}`,{name,college,email,image})
+        axios.put(`https://seedsnitch-backend.onrender.com/api/ecells/details/${id}`,{name,college,email,image})
         navigate(redirect);
     }
 
     useEffect(() => {
-        axios.get(`/api/ecells/details/${id}`)
+        axios.get(`https://seedsnitch-backend.onrender.com/api/ecells/details/${id}`)
         .then(res=> {
             let {name,email,logo,college} =res.data;
             setName(name);

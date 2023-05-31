@@ -10,7 +10,7 @@ const BlogDetails = () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/api/blogs/${id}`).then((res) => {
+    axios.get(`https://seedsnitch-backend.onrender.com/api/blogs/${id}`).then((res) => {
       setBlog(res.data);
     });
     setLoading(false);

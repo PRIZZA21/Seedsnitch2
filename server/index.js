@@ -90,6 +90,9 @@ app.use('/api/ecells', ecells);
 app.use('/api/blogs', blogs);
 app.use('/api/uploads', uploadRoutes);
 app.use('/api/uploadpdf', Upload_Pdf_Routes);
+app.get('/',(req,res)=>{
+    res.json({key:'success'});
+})
 
 
 // Setting up the static files
@@ -107,4 +110,5 @@ app.get('*', (req,res) => res.sendFile(path.resolve(__dirname,'../', 'client', '
 // Starting the server
 app.listen(port, () => {
     console.log(`App running on port ${port}`);
+    
 });

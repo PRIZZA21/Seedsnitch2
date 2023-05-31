@@ -64,12 +64,12 @@ const IncubatorTable = () => {
   const [pages, setPages] = useState(1);
 
   const logState = (id) => {
-    axios.put(`/api/incubators/toggleincubator/${id}`);
+    axios.put(`https://seedsnitch-backend.onrender.com/api/incubators/toggleincubator/${id}`);
   };
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/api/incubators?pageNumber=${pageNumber}`).then((res) => {
+    axios.get(`https://seedsnitch-backend.onrender.com/api/incubators?pageNumber=${pageNumber}`).then((res) => {
       setIncubatorList(res.data.incubators);
       setPage(res.data.page);
       setPages(res.data.pages);

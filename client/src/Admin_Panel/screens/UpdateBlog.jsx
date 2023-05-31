@@ -31,7 +31,7 @@ const UpdateBlog = () => {
             }
           }
   
-          var { data } = await axios.post('/api/uploads', formData, config)
+          var { data } = await axios.post('https://seedsnitch-backend.onrender.com/api/uploads', formData, config)
           
           data = (data.substr(8))
           data = '/' +data;
@@ -53,13 +53,13 @@ const UpdateBlog = () => {
     
     const submitHandler = (e) => {
         e.preventDefault();
-        axios.put(`/api/blogs/details/${id}`,{title,content,image})
+        axios.put(`https://seedsnitch-backend.onrender.com/api/blogs/details/${id}`,{title,content,image})
         navigate(redirect);
     }
 
     useEffect(() => {
         axios
-        .get(`/api/blogs/details/${id}`)
+        .get(`https://seedsnitch-backend.onrender.com/api/blogs/details/${id}`)
         .then(res=>{
             let {title,banner,content}=res.data;
             setTitle(title);
