@@ -12,6 +12,7 @@ const Apply = () => {
   const [college_name, setCollege_name] = useState("");
   const [contact_number, setContact_number] = useState(0);
   const [start_up_stage, setStart_up_stage] = useState("");
+  const [start_up_industry,setStart_up_industry]=useState("");
   const [uploading, setUploading] = useState(false);
   const [pdf, setPdf] = useState("");
   const [start_up_problem, setStart_up_problem] = useState("");
@@ -412,6 +413,103 @@ const Apply = () => {
                         onChange={(e) => setStart_up_stage(e.target.value)}
                       />
                     </div>
+                  </div>
+                  <div className="flex flex-wrap mb-6 w-full">
+                  <div className="w-full md:w-full px-3">
+                  
+                  <label
+                        className="block tracking-wide text-darkBlue  font-medium mb-2"
+                        htmlFor="grid-registered"
+                      >
+                        Industry of the Startup
+                        <span className="text-red-500">&nbsp;*</span>
+                      </label>
+
+                   <select name="industries" id="industry-select" className="font-serif appearance-none block w-full  text-darkBlue border border-gray rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" 
+                   onChange={(e)=>setStart_up_industry(e.target.value)} onfocus='this.size=10;' onblur='this.size=1;' 
+                   onchange='this.size=1; this.blur();'>
+                   <option value="">Please choose an option</option>
+                   <option value="Advertising">Advertising</option>
+                   <option value="Aeronautics/Aerospace">Aeronautics/Aerospace</option>
+                   <option value="Agriculture">Agriculture</option>
+                   <option value="AI">AI</option>
+                   <option value="Analytics">Analytics</option>
+                   <option value="AR/VR">AR/VR</option>
+                   <option value="Automotive">Automotive</option>
+                   <option value="Big Data">Big Data</option>
+                    <option value="" >              Careers</option>
+                    <option value="  Communication"   >  Communication</option>
+                    <option value= " Computer Vision"  >  Computer Vision</option>
+                    <option value= " Consumer Goods"  >  Consumer Goods</option>
+                    <option value="  Matrimonial"   >  Matrimonial</option>
+                    <option value="  •Defence"   >  Defence</option>
+                    <option value="Design  "   > Design </option>
+                    <option value="  Education"   >  Education</option>
+                    <option value="  Energy and Sustainability"   >  Energy and Sustainability</option>
+                    <option value="  Enterprise Software"   >  Enterprise Software</option>
+                    <option value="  Events"   >  Events</option>
+                    <option value="  Fashion"   >  Fashion</option>
+                     <option value=" Fintech   "> Fintech</option>
+                     <option value=" Foodtech   "> Foodtech</option>
+                     <option value=" Food and Beverages   "> Food and Beverages</option>
+                     <option value=" Gaming   "> Gaming</option>
+                     <option value=" Generative Al   "> Generative Al</option>
+                     <option value=" Gifting   "> Gifting</option>
+                     <option value=" Grocery   ">Grocery</option>
+                     <option value=" Hardware   ">Hardware</option>
+                     <option value=" Healthcare   ">Healthcare</option>
+                     <option value=" Healthtech   ">Healthtech</option>
+                     <option value=" Human Resources   ">Human Resources</option>
+                     <option value=" Information/Tech   ">Information/Tech</option>
+                     <option value=" • loT   ">• loT</option>
+                     <option value=" IT Services   ">IT Services</option>
+                     <option value=" Legal   ">Legal</option>
+                     <option value=" Logistics   ">Logistics</option>
+                   <option value="  Manufacturing">  Manufacturing</option> 
+                    <option value="Marketing">Marketing</option> 
+                    <option value="Media and Entertainment">Media and Entertainment</option> 
+                    <option value="Nano Technology">Nano Technology</option> 
+                    <option value="Networking">Networking</option> 
+                    <option value="Real Estate">Real Estate</option> 
+                    <option value="Retail">Retail</option> 
+                    <option value="Robotics">Robotics</option> 
+                    <option value="Safety">Safety</option> 
+                     <option value="ecurity">ecurity</option>S
+                    <option value="Services">Services</option> 
+                    <option value="Social Impact">Social Impact</option> 
+                    <option value="Social Network">Social Network</option> 
+                    <option value="Sports">Sports</option> 
+                    <option value="Transportation">Transportation</option> 
+                    <option value="Travel and Tourism       ">Travel and Tourism       </option> 
+                    <option value="Consulting">Consulting</option> 
+                    <option value="Consumer Interest">Consumer Interest</option> 
+                    <option value="E-Commerce">E-Commerce</option> 
+                    <option value="Engineering">Engineering</option> 
+                    <option value="Enterprise Mobility">Enterprise Mobility</option> 
+                    <option value="Government">Government</option> 
+                    <option value="Hyperlocal">Hyperlocal</option> 
+                    <option value="Location-Based Service">Location-Based Service</option> 
+                    <option value="Marketplace">Marketplace</option> 
+                    <option value="Mobile">Mobile</option> 
+                    <option value="Offline">Offline</option> 
+                    <option value="Online">Online</option> 
+                     <option value="ggregator">ggregator</option>A
+                     <option value="eer to Peer">eer to Peer</option>P
+                    <option value="Platform">Platform</option> 
+                    <option value="Rental">Rental</option> 
+                    <option value="Research">Research</option> 
+                    <option value="SaaS">SaaS</option> 
+                    <option value="Sharing Economy">Sharing Economy</option> 
+                    <option value="Subscription Commerce">Subscription Commerce</option> 
+                   
+                   </select>
+                  
+                  
+                  
+                  
+                  
+                  
+                  </div>
                   </div>
                   <div className="w-full flex flex-wrap mb-2">
                     <div className="w-full mb-6 md:mb-0 px-3">
