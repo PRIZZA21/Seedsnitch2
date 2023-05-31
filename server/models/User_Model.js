@@ -1,0 +1,34 @@
+const mongoose = require("mongoose");
+const bcrypt   = require('bcrypt');
+
+
+const userSchema = new mongoose.Schema(
+  { 
+    name         : { type: String, required: true, minlength: 2, maxlength: 50},
+    email        : { type: String, required: true, minlength: 5, maxlength: 255, unique: true,trim: true,lowercase: true},
+    hash_password: { type: String, required: true},
+    isAdmin      : { type: Boolean, default: false},
+    isAmbassador : { type: Boolean, default: false},
+    isIncubator  : { type: Boolean, default: false},
+    applications : { type: [mongoose.Schema.Types.ObjectId], ref: "Application", default: [] },
+    profile_pic  : { type: String, default: ""}
+  },
+  { 
+    timestamps: true
+  }
+);
+
+
+userSchema.virtual('password').set(function(password){
+  this.hash_password=bcrypt.hashSync(password,12) 
+});
+
+
+userSchema.methods.authenticate =async function(password){ 
+  return await bcrypt.compare(password,this.hash_password) 
+};
+
+
+module.exports =  mongoose.model("User", userSchema);
+// exports.User = User;
+

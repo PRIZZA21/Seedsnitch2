@@ -1,0 +1,135 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to SeedSnitch</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+      }
+      .container {
+        margin: auto;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      h1 {
+        text-align: center;
+        font-size: 32px;
+        color: #333;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      a {
+        display: block;
+        text-align: center;
+        font-size: 18px;
+        color: #fff;
+        background-color: #4caf50;
+        padding: 10px;
+        border-radius: 5px;
+        text-decoration: none;
+        width: 150px;
+        margin: 30px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div className="container">
+      <h1>Hi <%= data.founder.name%>! We are sorry to announce that your application has been rejected by all incubators!</h1>
+      <p>
+        For your help we are listing various reasons as stated by incubators associated with us
+      </p>
+    </div>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to SeedSnitch</title>
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.4;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: #f5f5f5;
+      }
+      .container {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: auto;
+        max-width: 600px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      p {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 18px;
+        line-height: 1.4;
+        margin-bottom: 20px;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div className="container">
+
+      <p>Dear <%= data.founder.name%>,</p>
+
+      <p>
+        We appreciate your submission of (the business idea) for funding to Seedsnitch and sincerely
+        value your enthusiasm for our programme as well as the effort put into your application.
+        Thank you for taking out time to apply for startup funding from Seedsnitch
+      </p>
+
+      <p>
+        After careful consideration, we regret to inform you that we will not be able to proceed with
+        your application, and it has been duly rejected. Please recognize the fact that this decision is
+        not a reflection of your entrepreneurial idea or capabilities, but rather the outcome of a very
+        competitive selection process. We are thankful for your interest in Seedsnitch and wish you
+        well in all your future endeavours.
+
+      </p>
+
+      <p>The reasons behind the rejection of your application have been stated below for your reference:</p>
+
+      <% for(var i = 0 ; i < data.arr.length ; i++) { %>
+        <tr>
+             <td><p><%= data.arr[i] %></p></td>
+        </tr>
+      <% } %>
+
+      <p>We value your participation in Seedsnitch and hope you will stay in touch with us for any
+        future prospects.
+        </p>
+
+        <p>Regards,<br />Seedsnitch </p>
+       
+
+      
+    </div>
+  </body>
+</html>
