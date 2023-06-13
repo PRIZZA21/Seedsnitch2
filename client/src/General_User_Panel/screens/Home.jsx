@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { login_google } from "../../redux/actions/userActions";
 import { useDispatch, useSelector } from "react-redux";
+import Community from "./Community.jsx"
 
 const Home = () => {
   const userLogin = useSelector((state) => state.userLogin);
@@ -123,6 +124,7 @@ const Home = () => {
           {/* <img src="./img/cover.jpg" className="-z-10" id="index-img" alt="" /> */}
         </div>
       </section>
+      <Community></Community>
 
       <section className="mt-2 md:mt-20 gap-x-8 h-auto md:flex-row px-4 md:px-0 md:gap-x-16 md:bg-[#f8f8f8] w-full md:border border-b-slate-200">
         <div className="text-center md:w-1/2 w-full h-full mx-auto flex flex-col items-center justify-start md:py-12">

@@ -44,9 +44,7 @@ const Footer = () => {
             <li>
               <Link to="./contact">Contact us</Link>
             </li>
-            <li>
-              <Link to="./faq">FAQ</Link>
-            </li>
+            
             <li>
               <Link to="./ambassador">Ambassador Program </Link>
             </li>
