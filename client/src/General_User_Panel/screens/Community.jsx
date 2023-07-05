@@ -52,7 +52,14 @@ const Community = () => {
               <div
                   key={ecell._id}
                   className=" test w-full cursor-pointer h-100 bg-white rounded-lg border-2 md:shadow-md m-4 md:mx-6 md:my-10 md:w-1/5 "
-                   >
+                  style={{
+    'margin-left': "0px",
+    'margin-right': "0px",
+    'margin-top': "0px",
+    'margin-bottom': "0px",
+    'object-fit': "cover" ,
+    width: "100%",}}
+ >
                   <img
                     src={`/${ecell.logo}`}
                     alt=""
