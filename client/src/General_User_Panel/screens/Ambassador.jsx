@@ -147,8 +147,8 @@ const Ambassador = () => {
           </h2>
           <div className="w-full md:w-[700px] h-full rounded-md mx-auto border border-t-gray-100 px-8">
             <form
-              className="w-full h-full max-w-2xl px-4 py-6"
-              id="ambass-form"
+              className="w-full h-full max-w-2xl px-4 py-6 font-weight:700 font-serif " 
+              id="ambass-form" 
               name="ambass"
               onSubmit={submitHandler}
             >

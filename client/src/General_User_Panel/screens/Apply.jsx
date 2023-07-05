@@ -164,7 +164,7 @@ const Apply = () => {
             <div className="h-full w-full flex flex-col gap-4 justify-between items-center space-y-8 p-4 md:pt-10">
               <div className="w-full md:w-[800px] h-auto rounded-md mx-auto border-t px-2 bg-white">
                 <form
-                  className="w-full h-full md:px-8 pt-6 pb-3 box-shadow-xl"
+                  className="w-full h-full md:px-8 pt-6 pb-3 box-shadow-xl font-serif"
                   name="apply"
                   id="apply-form"
                   onSubmit={submitHandler}
