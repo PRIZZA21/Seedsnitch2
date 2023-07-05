@@ -23,7 +23,7 @@ const applications24hrchecker = asyncHandler(async()=>{
             let timestamp1 = applications_of_this[j].timestamp
             if(timestamp2!==undefined && timestamp1!==undefined)
             {let diffInseonds = Math.round((timestamp2.getTime() - timestamp1.getTime()) / 1000);
-            if(diffInseonds>86400) shiftApplication(incubators[i]._id,applications_of_this[j].application_id)}
+            if(diffInseonds>604800) shiftApplication(incubators[i]._id,applications_of_this[j].application_id)}
       }
     }
 })

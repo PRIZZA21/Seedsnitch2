@@ -78,7 +78,8 @@ const Navbar = () => {
           {" "}
           Blogs{" "}
         </NavLink>
-        <div className="relative group">
+        {/* *************************************************************SERVICES REMOVED FROM NAVBAR******************************** */}
+        {/* <div className="relative group">
           <button className="flex flex-row items-center w-full link bg-transparent md:w-auto md:inline focus:outline-none">
             <span className="mr-2">Services</span>
             <span className="mt-3">
@@ -99,7 +100,7 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* <NavLink to="/faq" className="link">
           FAQ

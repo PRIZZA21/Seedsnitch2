@@ -1,17 +1,36 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Infobar from "../../Common_Components/Infobar";
 import Loader from "../../Common_Components/Loader";
+import {Carousel} from "../components/Carousel"
+import { CarouselItem } from '../components/Carousel';
+import "./Community.css";
 
 const Community = () => {
   const [ecellsList, setEcellsList] = useState("");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
-    axios.get("https://seedsnitch-backend.onrender.com/api/ecells/all").then((res) => setEcellsList(res.data));
-    setLoading(false);
+     // setLoading(true);
+    // axios.get("/api/ecells/all").then((res) => setEcellsList(res.data));
+    // setLoading(false);
+    const getEcellData= async ()=>{
+      try {
+        setLoading(true);
+        const response = await axios.get("https://seedsnitch-backend.onrender.com/api/ecells/all");
+        const ecelldata=response.data;
+        setEcellsList(ecelldata);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+      }};
+      getEcellData();
   }, []);
+  // let navigate = useNavigate()
+  // const ecell_click_handler = (id) => {
+  //   navigate(`/community/ecell/${id}`)
+  // }
 
   if (loading) return <Loader />;
 
@@ -25,12 +44,15 @@ const Community = () => {
       <section>
         <div className="py-4 min-h-[60vh] text-center mx-auto flex flex-col items-center justify-start">
           <div className="w-full p-4 flex flex-col  justify-center items-center my-4 md:flex-row md:flex-wrap">
+          
+          <Carousel>
             {ecellsList &&
               ecellsList.map((ecell) => (
-                <div
+                <CarouselItem key={ecell._id}>
+              <div
                   key={ecell._id}
-                  className="w-full h-100 bg-white rounded-lg border-2 md:shadow-md m-4 md:mx-6 md:my-10 md:w-1/5"
-                >
+                  className="w-full cursor-pointer h-100 bg-white rounded-lg border-2 md:shadow-md m-4 md:mx-6 md:my-10 md:w-1/5 test "
+                   >
                   <img
                     src={`/${ecell.logo}`}
                     alt=""
@@ -41,8 +63,11 @@ const Community = () => {
                       {ecell.name}
                     </h2>
                   </div>
-                </div>
+                </div></CarouselItem> 
               ))}
+              
+              </Carousel>
+              
           </div>
         </div>
       </section>
