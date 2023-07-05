@@ -51,7 +51,7 @@ const Community = () => {
                 <CarouselItem key={ecell._id}>
               <div
                   key={ecell._id}
-                  className="w-full cursor-pointer h-100 bg-white rounded-lg border-2 md:shadow-md m-4 md:mx-6 md:my-10 md:w-1/5 test "
+                  className=" test w-full cursor-pointer h-100 bg-white rounded-lg border-2 md:shadow-md m-4 md:mx-6 md:my-10 md:w-1/5 "
                    >
                   <img
                     src={`/${ecell.logo}`}
