@@ -184,8 +184,8 @@ const Navbar = () => {
         <button
           className={
             openMenu
-              ? "block hamburger lg:hidden focus:outline-none"
-              : "block hamburger lg:hidden focus:outline-none open"
+              ? "block hamburger lg:hidden focus:outline-none open"
+              : "block hamburger lg:hidden focus:outline-none "
           }
           onClick={toggleHamburger}
         >
@@ -198,8 +198,8 @@ const Navbar = () => {
         <div
           className={
             openMenu
-              ? "absolute flex-col items-center self-end py-4 mt-10 space-y-4 hidden font-bold sm:w-min-3xl sm:self-center px-8 right-6 drop-shadow-md text-black bg-slate-50"
-              : "absolute flex-col items-center self-end py-4 mt-10 space-y-4 font-bold sm:w-min-3xl sm:self-center px-2 right-6 drop-shadow-md text-black bg-slate-50 flex"
+              ? "absolute flex-col items-center self-end py-4 mt-10 space-y-4 font-bold sm:w-min-3xl sm:self-center px-2 right-6 drop-shadow-md text-black bg-slate-50 flex"
+              : "invisible absolute flex-col items-center self-end py-4 mt-10 space-y-4 font-bold sm:w-min-3xl sm:self-center px-2 right-6 drop-shadow-md text-black bg-slate-50 flex"
           }
         >
           {userInfo && userInfo.isIncubator && (
